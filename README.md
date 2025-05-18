@@ -77,7 +77,7 @@ We encourage you to personalize your `README.md` file to describe:
 - Challenges you faced
 - What you learned
 
-You can use the provided `README-template.md` as a starting point.
+You can use the provided [README-TEMPLATE.md](./README-TEMPLATE.md) as a starting point.
 
 ## 📤 Submitting & Sharing Your Solution
 

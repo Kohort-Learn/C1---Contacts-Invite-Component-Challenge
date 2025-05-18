@@ -44,7 +44,7 @@ Users should be able to:
 - [Next.js](https://nextjs.org/) - React framework
 - [TailwindCSS](https://tailwindcss.com/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+**Note: Delete this note and replace the list above with your own choices**
 
 ## What I learned
 
@@ -53,18 +53,18 @@ Use this section to recap over some of your major learnings while working throug
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<h1>Some HTML code</h1>
 ```
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.some-css-class {
+  color: red;
 }
 ```
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
+const fn = () => {
+  console.log("Kohort");
 };
 ```
 
