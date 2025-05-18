@@ -1,0 +1,11 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
