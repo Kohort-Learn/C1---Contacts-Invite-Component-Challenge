@@ -12,7 +12,7 @@ Your task is to build the Contacts Invite Component and match it as closely as p
 
 You're free to use any tools, frameworks, or libraries you’d like. Feel free to use this as a way to practice specific skills or explore new ones!
 
-The contact list data is provided in a local data.json file inside `/assets` folder, so you can render the UI dynamically.
+The contact list data is provided in a local `contacts.json` file inside `/assets` folder, so you can render the UI dynamically.
 
 ## ✅ User Stories
 
@@ -27,7 +27,8 @@ Your users should be able to:
 ## 📁 What’s Included
 
 - 🖼️ [Figma Design](https://www.figma.com/design/eLWw9KmjCzmwLpKW0nKkrP/Contacts-Search-Component?node-id=0-1&t=gEhcHfXQiWv0ZJ3X-1) – with different components and styling references
-- 📦 [Contacts Data](./assets/contacts.json) – to render contact items dynamically (found in the assets folder)
+- 📦 [Contacts Data](./assets/contacts.json) – to render contact items dynamically
+- 📦 [Images](./assets/images) – profile pictures used for contacts cards
 - 📚 [Style Guide](./DESIGN-GUIDE.md) – with color palette and font information
 
 ## 🚧 Suggested Workflow

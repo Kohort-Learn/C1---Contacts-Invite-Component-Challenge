@@ -3,30 +3,30 @@
     "name": "Google Developers Group",
     "status": "Online",
     "type": "Team",
-    "image": "gdg.png"
+    "image": "./assets/images/gdg.png"
   },
   {
     "name": "Richard D. Lovato",
     "status": "Online",
     "type": "Member",
-    "image": "richard.png"
+    "image": "./assets/images/richard.png"
   },
   {
     "name": "Kohort Learning",
     "status": "Active 12 days ago",
     "type": "Team",
-    "image": "kohort.png"
+    "image": "./assets/images/kohort.png"
   },
   {
     "name": "Seth T. Yeager",
     "status": "Online",
     "type": "Member",
-    "image": "seth.png"
+    "image": "./assets/images/seth.png"
   },
   {
     "name": "Robert C. Bennett",
     "status": "Active 12 days ago",
     "type": "Member",
-    "image": "robert.png"
+    "image": "./assets/images/robert.png"
   }
 ]
