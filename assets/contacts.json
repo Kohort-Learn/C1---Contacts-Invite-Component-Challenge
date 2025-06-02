@@ -1,32 +1,37 @@
 [
-  {
-    "name": "Google Developers Group",
-    "status": "Online",
-    "type": "Team",
-    "image": "./assets/images/gdg.png"
-  },
-  {
-    "name": "Richard D. Lovato",
-    "status": "Online",
-    "type": "Member",
-    "image": "./assets/images/richard.png"
-  },
-  {
-    "name": "Kohort Learning",
-    "status": "Active 12 days ago",
-    "type": "Team",
-    "image": "./assets/images/kohort.png"
-  },
-  {
-    "name": "Seth T. Yeager",
-    "status": "Online",
-    "type": "Member",
-    "image": "./assets/images/seth.png"
-  },
-  {
-    "name": "Robert C. Bennett",
-    "status": "Active 12 days ago",
-    "type": "Member",
-    "image": "./assets/images/robert.png"
-  }
+	{
+		"id": "google_01",
+		"name": "Google Developers Group",
+		"status": "Online",
+		"type": "Team",
+		"image": "./assets/images/gdg.png"
+	},
+	{
+		"id": "richard_01",
+		"name": "Richard D. Lovato",
+		"status": "Online",
+		"type": "Member",
+		"image": "./assets/images/richard.png"
+	},
+	{
+		"id": "kohort_01",
+		"name": "Kohort Learning",
+		"status": "Active 12 days ago",
+		"type": "Team",
+		"image": "./assets/images/kohort.png"
+	},
+	{
+		"id": "seth_01",
+		"name": "Seth T. Yeager",
+		"status": "Online",
+		"type": "Member",
+		"image": "./assets/images/seth.png"
+	},
+	{
+		"id": "robert_01",
+		"name": "Robert C. Bennett",
+		"status": "Active 12 days ago",
+		"type": "Member",
+		"image": "./assets/images/robert.png"
+	}
 ]
