@@ -75,6 +75,8 @@ function initTabs() {
 				contact.type === tab.getAttribute("data-tab") ||
 				tab.getAttribute("data-tab") == "all"
 		).length;
+		// Filter list on tab click
+		tab.addEventListener("click", filterByType);
 	});
 }
 
@@ -117,3 +119,23 @@ clearBtn.addEventListener("click", () => {
 	searchInput.value = "";
 	filterByInput({ target: { value: "" } });
 });
+
+// Filter list on tab click
+const filterByType = (e) => {
+	const tabs = document.querySelectorAll(".tab");
+	tabs.forEach((t) => t.classList.remove("active"));
+
+	let tab = e.target;
+	tab.classList.add("active");
+	activeTab = tab.getAttribute("data-tab").toLowerCase();
+	for (const index in contactList.children) {
+		if (
+			contacts[index].type.toLowerCase() === activeTab ||
+			activeTab == "all"
+		) {
+			contactList.children[index].style.display = "flex";
+		} else {
+			contactList.children[index].style.display = "none";
+		}
+	}
+};
