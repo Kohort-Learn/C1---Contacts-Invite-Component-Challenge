@@ -1,7 +1,27 @@
+:root {
+  --primary-color: #265bc7;
+  --muted-text-color: #bcc0c9;
+  --background-color: #ececec;
+  --online-color: #12b76a;
+  --offline-color: #d0d5dd;
+  --active-color: #3f9bfc;
+  --dark-gray-color: #667085;
+
+  --gradient-background: linear-gradient(0deg, #ececec 0%, #dcf7ff 100%);
+
+  --text-size: 14px;
+
+  --font-family: "Inter", sans-serif;
+
+  --padding: 16px;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
+  font-family: var(--font-family);
+  background: var(--background-color);
 }
 
 .main {
