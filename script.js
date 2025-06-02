@@ -63,8 +63,12 @@ document.getElementById("cancelBtn").addEventListener("click", () => {
 
 // Handle Invite button click
 document.getElementById("inviteBtn").addEventListener("click", () => {
-	let invitedContacts = [];
-	alert(`Invited ${invitedContacts.map((item) => item.name).join(", ")}`);
+	if (selectedContacts.length > 0) {
+		let invitedContacts = contacts.filter((item) =>
+			selectedContacts.includes(item.id)
+		);
+		alert(`Invited ${invitedContacts.map((item) => item.name).join(", ")}`);
+	}
 });
 
 function initTabs() {
