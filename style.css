@@ -1,72 +1,72 @@
 :root {
-  --primary-color: #265bc7;
-  --muted-text-color: #bcc0c9;
-  --background-color: #ececec;
-  --online-color: #12b76a;
-  --offline-color: #d0d5dd;
-  --active-color: #3f9bfc;
-  --dark-gray-color: #667085;
+	--primary-color: #265bc7;
+	--muted-text-color: #bcc0c9;
+	--background-color: #ececec;
+	--online-color: #12b76a;
+	--offline-color: #d0d5dd;
+	--active-color: #3f9bfc;
+	--dark-gray-color: #667085;
 
-  --gradient-background: linear-gradient(0deg, #ececec 0%, #dcf7ff 100%);
+	--gradient-background: linear-gradient(0deg, #ececec 0%, #dcf7ff 100%);
 
-  --text-size: 14px;
+	--text-size: 14px;
 
-  --font-family: "Inter", sans-serif;
+	--font-family: "Inter", sans-serif;
 
-  --padding: 16px;
+	--padding: 16px;
 }
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: var(--font-family);
-  background: var(--background-color);
+	padding: 0;
+	margin: 0;
+	font-family: var(--font-family);
+	background: var(--background-color);
 }
 
 .main {
-  display: grid;
-  min-height: 100vh;
-  place-items: center;
+	display: grid;
+	min-height: 100vh;
+	place-items: center;
 }
 
 .container {
-  background-color: white;
-  border: 1px solid #e5e7eb;
-  width: 360px;
-  max-width: 100%;
+	background-color: white;
+	border: 1px solid #e5e7eb;
+	width: 360px;
+	max-width: 100%;
 }
 
 /* Start: Section 1 - Search Input */
 
 .search {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: var(--padding);
-  border-bottom: 1px solid var(--background-color);
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: var(--padding);
+	border-bottom: 1px solid var(--background-color);
 }
 
 .search > img {
-  width: 24px;
-  cursor: pointer;
+	width: 24px;
+	cursor: pointer;
 }
 
 .search > .clear-btn {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
 }
 
 .search > input {
-  border: none;
-  outline: none;
-  flex: 1;
+	border: none;
+	outline: none;
+	flex: 1;
 }
 
 .search > input::placeholder {
-  color: var(--muted-text-color);
+	color: var(--muted-text-color);
 }
 
 /* End: Section 1 - Search Input */
@@ -74,32 +74,109 @@ body {
 /* Start: Section 2 - Filter Tabs */
 
 .tabs {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 12px;
-  padding: 0 var(--padding);
-  border-bottom: 1px solid var(--background-color);
+	display: flex;
+	gap: 16px;
+	margin-bottom: 12px;
+	padding: 0 var(--padding);
+	border-bottom: 1px solid var(--background-color);
 }
 
 .tabs > .tab {
-  padding: 17px 0px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  border-bottom: 1px solid transparent;
-  color: var(--dark-gray-color);
+	padding: 17px 0px;
+	border: none;
+	background: none;
+	cursor: pointer;
+	border-bottom: 1px solid transparent;
+	color: var(--dark-gray-color);
 }
 
 .tabs > .tab.active {
-  border-bottom: 2px solid var(--active-color);
-  color: var(--active-color);
+	border-bottom: 2px solid var(--active-color);
+	color: var(--active-color);
 }
 
 .tabs > .tab > span {
-  background-color: #f4f8fb;
-  padding: 2px 4px;
-  border-radius: 4px;
-  pointer-events: none;
+	background-color: #f4f8fb;
+	padding: 2px 4px;
+	border-radius: 4px;
+	pointer-events: none;
 }
 
 /* End: Section 2 - Filter Tabs */
+
+/* Start: Section 3 - Contacts Cards */
+
+.contacts-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	max-height: 350px;
+	overflow-y: auto;
+}
+
+.contacts-list .contact-item {
+	display: flex;
+	align-items: center;
+	padding: 10px var(--padding);
+	cursor: pointer;
+}
+
+.contacts-list .contact-item * {
+	pointer-events: none;
+}
+
+.contacts-list .contact-item.selected {
+	background: var(--gradient-background);
+}
+
+.contacts-list .contact-item:hover:not(.selected) {
+	opacity: 0.8;
+}
+
+.contacts-list .contact-item .contact-info {
+	margin-left: 10px;
+	font-size: var(--text-size);
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	pointer-events: none;
+}
+
+.contacts-list .contact-item .contact-info small {
+	color: var(--muted-text-color);
+}
+
+.contacts-list .contact-item .avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;
+	position: relative;
+	pointer-events: none;
+}
+
+.contacts-list .contact-item .avatar img {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.contacts-list .contact-item .avatar .status-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	border: solid 2px white;
+	position: absolute;
+	bottom: -5px;
+	right: -5px;
+}
+
+.contacts-list .contact-item .avatar .status-online {
+	background: var(--online-color);
+}
+
+.contacts-list .contact-item .avatar .status-offline {
+	background: var(--offline-color);
+}
+
+/* End: Section 3 - Contacts Cards */
