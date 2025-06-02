@@ -29,3 +29,10 @@ body {
   min-height: 100vh;
   place-items: center;
 }
+
+.container {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  width: 360px;
+  max-width: 100%;
+}
