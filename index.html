@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kohort | Contact Search Component</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <main class="main">
-      <div class="container">
-        <!-- Section 1: Search Input -->
-        <div class="search">
-          <label for="searchInput">
-            <img src="./assets/icons/search.svg" alt="search" />
-          </label>
-          <input type="text" placeholder="Search Contacts" id="searchInput" />
-          <button class="clear-btn">
-            <img src="./assets/icons/close.svg" alt="close" />
-          </button>
-        </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kohort | Contact Search Component</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<main class="main">
+			<div class="container">
+				<!-- Section 1: Search Input -->
+				<div class="search">
+					<label for="searchInput">
+						<img src="./assets/icons/search.svg" alt="search" />
+					</label>
+					<input type="text" placeholder="Search Contacts" id="searchInput" />
+					<button class="clear-btn">
+						<img src="./assets/icons/close.svg" alt="close" />
+					</button>
+				</div>
 
-        <!-- Section 2: Filter Tabs -->
-        <div class="tabs">
-          <button class="tab active" data-tab="all">All <span>0</span></button>
-          <button class="tab" data-tab="Team">Teams <span>0</span></button>
-          <button class="tab" data-tab="Member">Members <span>0</span></button>
-        </div>
+				<!-- Section 2: Filter Tabs -->
+				<div class="tabs">
+					<button class="tab active" data-tab="all">All <span>0</span></button>
+					<button class="tab" data-tab="Team">Teams <span>0</span></button>
+					<button class="tab" data-tab="Member">Members <span>0</span></button>
+				</div>
 
-        <!-- Section 3: Contacts Cards -->
-        <ul class="contacts-list" id="contactsList">
-          <!-- Contacts will be inserted here -->
-        </ul>
-      </div>
-    </main>
-  </body>
+				<!-- Section 3: Contacts Cards -->
+				<ul class="contacts-list" id="contactsList">
+					<!-- Contacts will be inserted here -->
+				</ul>
+
+				<!-- Section 4: Action Buttons -->
+				<div class="actions">
+					<button id="cancelBtn">Cancel</button>
+					<button id="inviteBtn" disabled>Invite</button>
+				</div>
+			</div>
+		</main>
+	</body>
 </html>

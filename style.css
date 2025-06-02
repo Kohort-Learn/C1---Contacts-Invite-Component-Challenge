@@ -180,3 +180,52 @@ body {
 }
 
 /* End: Section 3 - Contacts Cards */
+
+/* Start: Section 4 - Action Buttons */
+
+.actions {
+	display: flex;
+	gap: 8px;
+	justify-content: flex-end;
+	padding: var(--padding);
+}
+
+.actions > button {
+	padding: 6px 25px;
+	border-radius: 8px;
+	border: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.actions > button#cancelBtn {
+	background-color: transparent;
+	border: 1px solid var(--offline-color);
+	color: var(--dark-gray-color);
+}
+
+.actions > button#cancelBtn:hover {
+	background-color: var(--dark-gray-color);
+	color: white;
+}
+
+.actions > button#inviteBtn {
+	background-color: var(--primary-color);
+	border: 1px solid var(--primary-color);
+	color: white;
+}
+
+.actions > button#inviteBtn:hover:not(:disabled) {
+	background-color: var(--active-color);
+	border-color: var(--active-color);
+	color: white;
+}
+
+.actions > button#inviteBtn:disabled {
+	background-color: var(--dark-gray-color);
+	border-color: var(--dark-gray-color);
+	cursor: not-allowed;
+	opacity: 0.4;
+}
+
+/* End: Section 4 - Action Buttons */

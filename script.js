@@ -45,3 +45,14 @@ const initContacts = async () => {
 };
 
 initContacts();
+
+// Handle Cancel button click
+document.getElementById("cancelBtn").addEventListener("click", () => {
+	alert("Cancelled");
+});
+
+// Handle Invite button click
+document.getElementById("inviteBtn").addEventListener("click", () => {
+	let invitedContacts = [];
+	alert(`Invited ${invitedContacts.map((item) => item.name).join(", ")}`);
+});
