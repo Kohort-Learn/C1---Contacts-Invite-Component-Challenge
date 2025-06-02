@@ -70,3 +70,36 @@ body {
 }
 
 /* End: Section 1 - Search Input */
+
+/* Start: Section 2 - Filter Tabs */
+
+.tabs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+  padding: 0 var(--padding);
+  border-bottom: 1px solid var(--background-color);
+}
+
+.tabs > .tab {
+  padding: 17px 0px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  color: var(--dark-gray-color);
+}
+
+.tabs > .tab.active {
+  border-bottom: 2px solid var(--active-color);
+  color: var(--active-color);
+}
+
+.tabs > .tab > span {
+  background-color: #f4f8fb;
+  padding: 2px 4px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* End: Section 2 - Filter Tabs */
