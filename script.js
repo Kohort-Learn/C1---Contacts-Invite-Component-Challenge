@@ -1,5 +1,6 @@
 let contacts = [];
 const contactList = document.getElementById("contactsList");
+let selectedContacts = [];
 let activeTab = "all";
 
 function ContactItemCardHTML(contact) {
@@ -26,6 +27,8 @@ function appendContactCard(contact) {
 	li.setAttribute("data-index", contact.id);
 	// set innerHTML of list item
 	li.innerHTML = ContactItemCardHTML(contact);
+	// toggle card selection on click
+	li.addEventListener("click", toggleCardSelection);
 	// append list item to contacts list
 	contactList.appendChild(li);
 }
@@ -69,4 +72,17 @@ function initTabs() {
 				tab.getAttribute("data-tab") == "all"
 		).length;
 	});
+}
+
+// Select/Unselect a contact
+function toggleCardSelection(e) {
+	e.target.classList.toggle("selected");
+	let id = e.target.getAttribute("data-index");
+
+	if (selectedContacts.includes(id)) {
+		selectedContacts.splice(selectedContacts.indexOf(id), 1);
+	} else {
+		selectedContacts.push(id);
+	}
+	inviteBtn.disabled = selectedContacts.length === 0;
 }
