@@ -36,3 +36,37 @@ body {
   width: 360px;
   max-width: 100%;
 }
+
+/* Start: Section 1 - Search Input */
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: var(--padding);
+  border-bottom: 1px solid var(--background-color);
+}
+
+.search > img {
+  width: 24px;
+  cursor: pointer;
+}
+
+.search > .clear-btn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.search > input {
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.search > input::placeholder {
+  color: var(--muted-text-color);
+}
+
+/* End: Section 1 - Search Input */
