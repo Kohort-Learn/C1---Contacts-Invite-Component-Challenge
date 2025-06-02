@@ -1,5 +1,6 @@
 let contacts = [];
 const contactList = document.getElementById("contactsList");
+let activeTab = "all";
 
 function ContactItemCardHTML(contact) {
 	let statusClass =
@@ -40,6 +41,8 @@ const initContacts = async () => {
 			contacts.forEach((contact) => {
 				appendContactCard(contact);
 			});
+			// Initialize tabs with contacts count
+			initTabs();
 		})
 		.catch((error) => console.log(error));
 };
@@ -56,3 +59,14 @@ document.getElementById("inviteBtn").addEventListener("click", () => {
 	let invitedContacts = [];
 	alert(`Invited ${invitedContacts.map((item) => item.name).join(", ")}`);
 });
+
+function initTabs() {
+	const tabs = document.querySelectorAll(".tab");
+	tabs.forEach((tab) => {
+		tab.querySelector("span").textContent = contacts.filter(
+			(contact) =>
+				contact.type === tab.getAttribute("data-tab") ||
+				tab.getAttribute("data-tab") == "all"
+		).length;
+	});
+}
