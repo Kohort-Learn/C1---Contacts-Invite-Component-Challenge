@@ -27,6 +27,10 @@ function appendContactCard(contact) {
 	li.setAttribute("data-index", contact.id);
 	// set innerHTML of list item
 	li.innerHTML = ContactItemCardHTML(contact);
+	// check if contact is selected when filters are applied
+	if (selectedContacts.includes(contact.id)) {
+		li.classList.add("selected");
+	}
 	// toggle card selection on click
 	li.addEventListener("click", toggleCardSelection);
 	// append list item to contacts list
@@ -86,3 +90,30 @@ function toggleCardSelection(e) {
 	}
 	inviteBtn.disabled = selectedContacts.length === 0;
 }
+
+// Filter list on search input change
+const searchInput = document.getElementById("searchInput");
+
+const filterByInput = (e) => {
+	let value = e.target.value;
+	contactList.innerHTML = "";
+	contacts
+		.filter(
+			(contact) =>
+				contact.name.toLowerCase().includes(value.toLowerCase()) &&
+				(contact.type.toLowerCase() === activeTab || activeTab === "all")
+		)
+		.forEach((contact) => {
+			appendContactCard(contact);
+		});
+};
+
+searchInput.addEventListener("input", filterByInput);
+
+// Handle Input clear button click
+const clearBtn = document.querySelector(".clear-btn");
+
+clearBtn.addEventListener("click", () => {
+	searchInput.value = "";
+	filterByInput({ target: { value: "" } });
+});
